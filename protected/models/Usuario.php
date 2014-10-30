@@ -7,13 +7,11 @@
  * @property integer $USU_ID
  * @property integer $RESTO_ID
  * @property integer $ROL_ID
- * @property string $USUPASSWORD
  * @property string $USUCREATE
  * @property string $USUNOMBRES
  * @property string $USUAPELLIDOS
  * @property string $USURUT
  * @property integer $USUTELEFONO
- * @property string $USUESTADO
  *
  * The followings are the available model relations:
  * @property Comanda[] $comandas
@@ -41,14 +39,12 @@ class Usuario extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('RESTO_ID, ROL_ID, USUTELEFONO', 'numerical', 'integerOnly'=>true),
-			array('USUPASSWORD', 'length', 'max'=>30),
 			array('USUNOMBRES, USUAPELLIDOS', 'length', 'max'=>25),
 			array('USURUT', 'length', 'max'=>12),
-			array('USUESTADO', 'length', 'max'=>13),
 			array('USUCREATE', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('USU_ID, RESTO_ID, ROL_ID, USUPASSWORD, USUCREATE, USUNOMBRES, USUAPELLIDOS, USURUT, USUTELEFONO, USUESTADO', 'safe', 'on'=>'search'),
+			array('USU_ID, RESTO_ID, ROL_ID, USUCREATE, USUNOMBRES, USUAPELLIDOS, USURUT, USUTELEFONO', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,16 +70,14 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'USU_ID' => 'Usu',
+			'USU_ID' => 'Usu_id',
 			'RESTO_ID' => 'Restorant',
 			'ROL_ID' => 'Rol',
-			'USUPASSWORD' => 'Password',
 			'USUCREATE' => 'Fecha de creación',
 			'USUNOMBRES' => 'Nombres',
 			'USUAPELLIDOS' => 'Apellidos',
 			'USURUT' => 'Rut',
-			'USUTELEFONO' => 'Telefono',
-			'USUESTADO' => 'Estado',
+			'USUTELEFONO' => 'Teléfono',
 		);
 	}
 
@@ -108,13 +102,11 @@ class Usuario extends CActiveRecord
 		$criteria->compare('USU_ID',$this->USU_ID);
 		$criteria->compare('RESTO_ID',$this->RESTO_ID);
 		$criteria->compare('ROL_ID',$this->ROL_ID);
-		$criteria->compare('USUPASSWORD',$this->USUPASSWORD,true);
 		$criteria->compare('USUCREATE',$this->USUCREATE,true);
 		$criteria->compare('USUNOMBRES',$this->USUNOMBRES,true);
 		$criteria->compare('USUAPELLIDOS',$this->USUAPELLIDOS,true);
 		$criteria->compare('USURUT',$this->USURUT,true);
 		$criteria->compare('USUTELEFONO',$this->USUTELEFONO);
-		$criteria->compare('USUESTADO',$this->USUESTADO,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

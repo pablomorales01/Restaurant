@@ -10,8 +10,23 @@
     'enableAjaxValidation'=>false,
     'enableClientValidation'=>false,
 )); ?>
+
+<?php
+/**
+	Al principio del formulario
+
+	Roles (dropdownList)
+	if(roles!= SuperAdmin)
+		Muestra Lista de Restaurant
+
+	Datos Personales...
+*/
+?>
+
+
 <div class="row form-group">
 
+	<!--Cruge-->
 	<div class="col">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>

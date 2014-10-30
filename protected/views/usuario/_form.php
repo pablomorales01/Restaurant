@@ -50,7 +50,6 @@ $form = $this->beginWidget('bootstrap.widgets.BsActiveForm', array(
 		?>
 	</div>
 
-	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'USUPASSWORD'); ?>

@@ -43,13 +43,17 @@ body
 
 #logo
 {
-	padding: 10px 20px;
+	/*padding: 10px 20px;*/
 	font-size: 200%;
+	text-align: right;
+	/*float: right;*/
 }
+
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	/*background:white url(bg.gif) repeat-x left top;*/
+	background-color: indigo;
 }
 
 #mainmenu ul
@@ -75,8 +79,8 @@ body
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	color: #F1F2F4;
+	background-color: rgba(187, 160, 160, 0.42);
 	text-decoration:none;
 }
 

@@ -5394,3 +5394,11 @@ Stack trace:
 REQUEST_URI=/yii/Restaurant/Usuario/login
 HTTP_REFERER=http://localhost/yii/Restaurant/cruge/ui/rbacauthitemchilditems/id/Cocina
 ---
+2014/11/02 02:39:17 [error] [application] UiController
+CrugeUser->validate es false
+<div class="errorSummary"><p>Por favor corrija los siguientes errores de ingreso:</p>
+<ul>
+<li>clave invalida</li>
+</ul></div>
+in C:\xampp\htdocs\yii\Restaurant\protected\modules\cruge\controllers\UiController.php (158)
+in C:\xampp\htdocs\yii\Restaurant\index.php (13)

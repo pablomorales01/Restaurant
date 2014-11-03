@@ -2,6 +2,7 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <div class="span-19">
 	<div id="content">
+	<?php echo 'contenido column2' ?>
 		<?php echo $content; ?>
 	</div><!-- content -->
 </div>

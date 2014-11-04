@@ -27,28 +27,15 @@
 	<div id="header">
 		
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logopenco.png" width="350" height="150">
+		<?php /*echo BsHtml::emphasis(Yii::app()->name, array(
+    		'color' => BsHtml::TEXT_ALIGN_RIGHT
+			));
+			*/?>
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		
 	</div><!-- header -->
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				//array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Administrar Usuarios'
-					, 'url'=>Yii::app()->user->ui->userManagementAdminUrl
-					, 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Login'
-					, 'url'=>Yii::app()->user->ui->loginUrl
-					, 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')'
-					, 'url'=>Yii::app()->user->ui->logoutUrl
-					, 'visible'=>!Yii::app()->user->isGuest),
-			),
-		)); ?>
-	</div><!-- mainmenu -->
+	
 
 	<!--Nuevo Menú-->
 
